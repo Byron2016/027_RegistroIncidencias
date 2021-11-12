@@ -9,6 +9,7 @@
   padding: 10px 85px;
   border-radius: 30px;
   box-shadow: 0px 4px 5px var(--white-lilac); 
+  cursor: pointer;
 }
 
 .type-primary {
