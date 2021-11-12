@@ -1,3 +1,5 @@
+import '../util/main.css'
+
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
 const customViewports = {
