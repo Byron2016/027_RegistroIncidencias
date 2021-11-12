@@ -12,6 +12,14 @@
   cursor: pointer;
 }
 
+.button:hover {
+  filter: brightness(1.1);
+}
+
+.button:active {
+  filter: brightness(0.9);
+}
+
 .type-primary {
   background: var(--medium-purple);
   color: var(--white);
