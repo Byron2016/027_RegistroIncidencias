@@ -76,9 +76,9 @@ function buildCustomProperties(){
 
   }
   if(caso == 'Recursivo'){
-    const choicesKeys = Object.keys(choices)
     const choicesStr = transformTokens(null, choices)
-    const customProperties = choicesStr
+    const decisionsStr = transformTokens(null, decisions)
+    const customProperties = `${choicesStr}${decisionsStr}`
     customProperties_Final = customProperties
   }
 
