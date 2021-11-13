@@ -30,7 +30,7 @@ function transformTokens(parentKey, object){
   
 }
 
-function buildCustomProperties(){
+function buildTokens(){
   const caso = 'Recursivo'
   let customProperties_Final = ''
   
@@ -106,6 +106,6 @@ function buildCustomProperties(){
 	// );
 }
 
-buildCustomProperties();
+buildTokens();
 
 
