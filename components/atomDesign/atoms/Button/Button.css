@@ -2,7 +2,7 @@
   border: 1px solid transparent;
   padding: 10px 85px;
   border-radius: 30px;
-  box-shadow: 0px 4px 5px var(--white-lilac); 
+  box-shadow: 0px 4px 5px var(--colors-brand-white-lilac); 
   cursor: pointer;
   transition: all 0.5s ease;
 }
@@ -16,14 +16,12 @@
 }
 
 .type-primary {
-  background: var(--medium-purple);
-  color: var(--white);
-
+  background: var(--colors-brand-medium-purple);
+  color: var(--colors-white);
 }
 
 .type-secondary{
   background: transparent;
-  color: var(--medium-purple);
-  border: 1px solid var(--medium-purple);
-
+  color: var(--colors-brand-medium-purple);
+  border: 1px solid var(--colors-brand-medium-purple);
 }
