@@ -4,6 +4,10 @@ const fs = require('fs');
 
 //console.log('>>>scipt')
 
+const toKababCase = string => string
+.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2')
+.toLowerCase();
+
 function transformTokens(parentKey, object){
   
   const objectkeys = Object.keys(object)
@@ -14,14 +18,14 @@ function transformTokens(parentKey, object){
     if(typeof value === 'object'){
       const customProperty = parentKey ? `${parentKey}-${objectkey}` : `${objectkey}`
       return `${tokensTransformed}
-      ${transformTokens(`${customProperty}`, value)}`
+      ${transformTokens(`${toKababCase(customProperty)}`, value)}`
     }
 
     //const customProperty = parentKey ? `--${parentKey}-${objectkey}` : `${parentKey}-${objectkey}`
     //${customProperty}: ${value};
 
     return `${tokensTransformed}
-    --${parentKey}-${objectkey}: ${value};`
+    --${parentKey}-${toKababCase(objectkey)}: ${value};`
 
   }, '')
 
