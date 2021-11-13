@@ -1,4 +1,4 @@
-import Button from './Button';
+import Button, { TYPES }  from './Button';
 
 export default {
   component: Button,
@@ -10,12 +10,18 @@ const Template = (args) => <Button {...args}/>;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  children: 'Primary',
-  type: 'primary',
+  children: 'Button primary',
+  type: TYPES[0],
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  children: 'Secondary',
-  type: 'secondary',
+  children: 'Button secondary',
+  type: TYPES[1],
+};
+
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+  children: 'Button tertiary',
+  type: TYPES[2],
 };
