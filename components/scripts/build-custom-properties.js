@@ -93,6 +93,18 @@ function buildCustomProperties(){
       return console.error(error);
     }
   });
+  //Si quieren eliminar todos los espacios y acomodar los tokens.css 
+  //pueden poner este código en la parte de el fs.writeFile dentro de el buildCustomProperties 
+  // fs.writeFile(
+	// 	'./util/tokens.css',
+	// 	data.replace(/\t/g, '').replace(/\n{2,}/g, '\n\t'),
+	// 	'utf8',
+	// 	error => {
+	// 		if (error) {
+	// 			return console.error(error);
+	// 		}
+	// 	},
+	// );
 }
 
 buildCustomProperties();
