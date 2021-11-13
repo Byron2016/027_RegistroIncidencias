@@ -4,16 +4,46 @@ const fs = require('fs');
 
 //console.log('>>>scipt')
 
-const customProperties = `${JSON.stringify(choices)} ${JSON.stringify(decisions)}`;
+function buildCustomProperties(){
+  const choicesKeys = Object.keys(choices)
 
-const data = `
-:root {
-  ${customProperties}
-}
-`
+  // choicesKeys.reduce((prev, curr) => {
 
-fs.writeFile('./util/tokens.css', data, 'utf8', function(error){
-  if(error){
-    return console.error(error);
+  // }, '')
+
+  // const customProperties = `${JSON.stringify(choices)} ${JSON.stringify(decisions)}`;
+
+  let choicesStr = ''
+
+  if(typeof choices['colors'] == 'object'){
+    const colorkeys = Object.keys(choices['colors'])
+
+    choicesStr = colorkeys.reduce((prev, curr) => {
+      if(typeof choices['colors'][curr] == 'object') {
+        const brandkeys = Object.keys(choices['colors'][curr])
+        // brandkeys.reduce((prev, curr) => {
+
+        // }, '')
+        return brandkeys;
+      }
+     }, '')
   }
-});
+
+  //const customProperties = choicesKeys
+  const customProperties = choicesStr
+
+  const data = `
+  :root {
+    ${customProperties}
+  }
+  `
+  fs.writeFile('./util/tokens.css', data, 'utf8', function(error){
+    if(error){
+      return console.error(error);
+    }
+  });
+}
+
+buildCustomProperties();
+
+
