@@ -13,19 +13,15 @@ function transformTokens(parentKey, object){
 
     if(typeof value === 'object'){
       const customProperty = parentKey ? `${parentKey}-${objectkey}` : `${objectkey}`
-      return `
-        ${tokensTransformed}
-        ${transformTokens(`${customProperty}`, value)}
-      `
+      return `${tokensTransformed}
+      ${transformTokens(`${customProperty}`, value)}`
     }
 
     //const customProperty = parentKey ? `--${parentKey}-${objectkey}` : `${parentKey}-${objectkey}`
     //${customProperty}: ${value};
 
-    return `
-      ${tokensTransformed}
-      --${parentKey}-${objectkey}: ${value};
-    `
+    return `${tokensTransformed}
+    --${parentKey}-${objectkey}: ${value};`
 
   }, '')
 
@@ -83,11 +79,10 @@ function buildCustomProperties(){
   }
 
 
-  const data = `
-    :root {
-      ${customProperties_Final}
-    }
-    `
+  const data = `:root {
+    ${customProperties_Final.trim()}
+  }`
+  //const data =[":root {",customProperties_Final.trim(),"}"].join('\n')
 
   fs.writeFile('./util/tokens.css', data, 'utf8', function(error){
     if(error){
