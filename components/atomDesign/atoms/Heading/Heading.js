@@ -16,12 +16,12 @@ const Heading = ({ children, color, size}) => (
 Heading.prototypes = {
   children: PropTypes.node.isRequired,
    size: PropTypes.oneOf(['xs', 'sm', 'md']),
-   color: PropTypes.oneOf(['primary']),
+   color: PropTypes.oneOf(['primary','default']),
 }
 
 Heading.defaultProps = {
   children: "ContenidoDefault",
-  size: SIZES[0],
+  size: SIZES[1],
   color: "default",
 };
 

@@ -21,6 +21,20 @@ Default.args = {
   color: "default",
 };
 
+export const ColorPrimary = Template.bind({});
+ColorPrimary.args = {
+  children: 'ColorPrimary text',
+  size: SIZES[1],
+  color: "primary",
+};
+
+export const ColorDefault = Template.bind({});
+ColorDefault.args = {
+  children: 'ColorDefault text',
+  size: SIZES[1],
+  color: "default",
+};
+
 export const PrimaryStraSmall = Template.bind({});
 PrimaryStraSmall.args = {
   children: 'Primary text',
