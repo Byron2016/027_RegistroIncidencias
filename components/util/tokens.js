@@ -1,17 +1,10 @@
 export const choices = {
   colors: {
     brand: {
-      koromiko: '#fcb64d',
-      chiffon: '#fefcb9',
-      beige: '#fefce7',
-      cinnabar: '#f04c39',
-      mandyspink: '#febb9f',
-      dawnpink: '#fcdcd9',
-      bayofmany: '#204282',
-      poloblue: '#8ea4ce',
-      mystic: '#eceff4',
-      tuna: '#494949',
-      orange: '#fc9e12'
+      mediumPurple: '#9879e9',
+      white: '#fff',
+      whiteLilac: '#e8e8e8',
+      eastBay: '#455970',
     },
 
     transparent: 'transparent',
@@ -269,104 +262,8 @@ export const choices = {
 }
 
 export const decisions = {
-  // fonts
-  title: {
-    fontFamily: choices.fontFamily.sans,
-    fontWeight: choices.fontWeight.bold,
-    textTransform: 'uppercase',
-    fontSize: {
-      '4': choices.fontSize.md,
-      '3': choices.fontSize.lg,
-      '2': choices.fontSize['3xl'],
-      '1': choices.fontSize['4xl'],
-      '0': choices.fontSize['5xl']
-    },
-    color: {
-      default: choices.colors.brand.tuna,
-      alt: {
-        blue: choices.colors.brand.bayofmany,
-        red: choices.colors.brand.cinnabar,
-        yellow: choices.colors.brand.chiffon,
-        orange: choices.colors.brand.orange,
-        gray: choices.colors.gray[800]
-      }
-    }
+  colors: {
+    primary: choices.colors.brand.mediumPurple,
   },
-  subtitle: {
-    fontFamily: choices.fontFamily.serif,
-    fontWeight: choices.fontWeight.normal,
-    textTransform: 'uppercase',
-    fontSize: {
-      '2': choices.fontSize.lg,
-      '1': choices.fontSize['2xl']
-    },
-    color: {
-      default: choices.colors.brand.tuna,
-      alt: {
-        blue: choices.colors.brand.bayofmany,
-        red: choices.colors.brand.cinnabar,
-        yellow: choices.colors.brand.koromiko,
-        gray: choices.colors.gray[800]
-      }
-    }
-  },
-  label: {
-    fontFamily: choices.fontFamily.sans,
-    fontWeight: choices.fontWeight.bold,
-    fontSize: choices.fontSize.xs,
-    color: choices.colors.gray[900]
-  },
-  eyebrow: {
-    fontFamily: choices.fontFamily.sans,
-    fontWeight: choices.fontWeight.bold,
-    fontSize: {
-      '2': choices.fontSize.xs,
-      '1': choices.fontSize.lg
-    },
-    color: choices.colors.brand.tuna
-  },
-  paragraph: {
-    fontFamily: choices.fontFamily.sans,
-    fontWeight: {
-      normal: choices.fontWeight.normal,
-      bold: choices.fontWeight.bold
-    },
-    fontSize: {
-      sm: choices.fontSize.lg,
-      md: choices.fontSize.xl
-    },
-    color: {
-      default: choices.colors.brand.tuna,
-      alt: {
-        blue: choices.colors.brand.bayofmany,
-        red: choices.colors.brand.cinnabar,
-        yellow: choices.colors.brand.chiffon,
-        gray: choices.colors.gray[800]
-      }
-    }
-  },
-  icon: {
-    color: {
-      gray: choices.colors.gray[900]
-    },
-    fontSize: {
-      sm: choices.fontSize.sm,
-      md: choices.fontSize.md,
-      lg: choices.fontSize.xl
-    }
-  },
-  // layout
-  container: {
-    maxWidth: { large: choices.screens.xl, small: choices.screens.md },
-    padding: choices.spacing[6]
-  },
-  // utils
-  queries: {
-    screens: {
-      xsmall: `max-width: ${choices.screens.max.xs}`,
-      small: `max-width: ${choices.screens.max.sm}`,
-      mobile: `max-width: ${choices.screens.max.lg}`,
-      desktop: `min-width: ${choices.screens.lg}`
-    }
-  }
+
 }
