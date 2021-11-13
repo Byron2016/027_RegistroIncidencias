@@ -21,10 +21,23 @@ function buildCustomProperties(){
     choicesStr = colorkeys.reduce((prev, curr) => {
       if(typeof choices['colors'][curr] == 'object') {
         const brandkeys = Object.keys(choices['colors'][curr])
-        // brandkeys.reduce((prev, curr) => {
-
-        // }, '')
-        return brandkeys;
+        const colorsStr = brandkeys.reduce((prevBrandkeys, currBrandkeys) => {
+          const value = choices['colors'][curr][currBrandkeys]
+          return `
+          ${prevBrandkeys}
+          --colors-${curr}-${currBrandkeys}: ${value};
+          `;
+        }, '')
+        //return brandkeys;
+        return `
+        ${prev}
+        ${colorsStr}
+        `
+      } else {
+        return `
+        ${prev}
+        --colors-${curr}: ${choices['colors'][curr]};
+        `
       }
      }, '')
   }
