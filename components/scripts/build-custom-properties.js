@@ -11,12 +11,16 @@ function transformTokens(parentKey, object){
   return objectkeys.reduce((tokensTransformed, objectkey) => {
     const value = object[objectkey]
 
-    if(typeof value == 'object'){
+    if(typeof value === 'object'){
+      const customProperty = parentKey ? `${parentKey}-${objectkey}` : `${objectkey}`
       return `
         ${tokensTransformed}
-        --${transformTokens(`${parentKey}-${objectkey}`, value)}
+        ${transformTokens(`${customProperty}`, value)}
       `
     }
+
+    //const customProperty = parentKey ? `--${parentKey}-${objectkey}` : `${parentKey}-${objectkey}`
+    //${customProperty}: ${value};
 
     return `
       ${tokensTransformed}
@@ -73,57 +77,11 @@ function buildCustomProperties(){
   }
   if(caso == 'Recursivo'){
     const choicesKeys = Object.keys(choices)
-    const choicesStr = transformTokens('colors', choices.colors)
+    const choicesStr = transformTokens(null, choices)
     const customProperties = choicesStr
     customProperties_Final = customProperties
-    // const data = `
-    //   :root {
-    //     ${customProperties}
-    //   }
-    // `
   }
-  // const choicesKeys = Object.keys(choices)
-  // let choicesStr = ''
-  // if(typeof choices['colors'] == 'object'){
-  //   const colorkeys = Object.keys(choices['colors'])
 
-  //   choicesStr = colorkeys.reduce((prev, curr) => {
-  //     if(typeof choices['colors'][curr] == 'object') {
-  //       const brandkeys = Object.keys(choices['colors'][curr])
-  //       const colorsStr = brandkeys.reduce((prevBrandkeys, currBrandkeys) => {
-  //         const value = choices['colors'][curr][currBrandkeys]
-  //         return `
-  //         ${prevBrandkeys}
-  //         --colors-${curr}-${currBrandkeys}: ${value};
-  //         `;
-  //       }, '')
-  //       //return brandkeys;
-  //       return `
-  //       ${prev}
-  //       ${colorsStr}
-  //       `
-  //     } else {
-  //       return `
-  //       ${prev}
-  //       --colors-${curr}: ${choices['colors'][curr]};
-  //       `
-  //     }
-  //   }, '')
-  // }
-
-  // //const customProperties = choicesKeys
-  // const customProperties = choicesStr
-
-  // const data = `
-  // :root {
-  //   ${customProperties}
-  // }
-  // `
-  // fs.writeFile('./util/tokens.css', data, 'utf8', function(error){
-  //   if(error){
-  //     return console.error(error);
-  //   }
-  // });
 
   const data = `
     :root {
