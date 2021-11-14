@@ -1,7 +1,7 @@
 const ICONS_ASSETS_PATH = '/icons/'
 
 const iconMap = {
-  'arrow-right':'arrow-right',
+  arrowRight:'arrow-right',
   home: 'home-outline', // FIXME: add this icon property
 }
 

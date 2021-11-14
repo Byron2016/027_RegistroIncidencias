@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { mapType } from './helpers'
 
-export const TYPES = ['arrow-right', 'angle-down'];
+export const TYPES = ['arrowRight', 'angleDown'];
 
 const Icon = ({type}) => (
   <div>
