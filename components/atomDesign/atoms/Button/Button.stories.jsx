@@ -1,4 +1,5 @@
 import Button, { TYPES }  from './Button';
+import Icon from '../Icons/Icon'
 
 export default {
   component: Button,
@@ -16,6 +17,13 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  children: 'Button secondary',
+  type: TYPES[1],
+};
+
+const TemplateWI = (args) => <Button {...args}>Button secondary<Icon type="arrow-right"/></Button>;
+export const WithIcon = TemplateWI.bind({});
+WithIcon.args = {
   children: 'Button secondary',
   type: TYPES[1],
 };
