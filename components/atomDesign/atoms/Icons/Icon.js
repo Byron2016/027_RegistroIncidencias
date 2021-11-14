@@ -1,14 +1,11 @@
 import PropTypes from 'prop-types';
-//import rightArrow from '../../../assets/icons/arrow-right.svg'
-import './Icon.css';
-import classnames from 'classnames';
-import getIconsList from './iconList'
+import { mapType } from './helpers'
 
 export const TYPES = ['arrow-right', 'angle-down'];
 
 const Icon = ({type}) => (
   <div>
-    <img src={getIconsList(type)}></img>
+    <img src={mapType(type)}></img>
   </div>
 );
 
