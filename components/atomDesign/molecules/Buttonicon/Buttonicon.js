@@ -6,7 +6,7 @@ export const BUTTON_TYPES = ['primary', 'secondary', 'tertiary'];
 export const ICON_TYPES = ['arrowRight', 'xxxxx'];
 
 const Buttonicon = ({ children, buttonType, iconType }) => (
-  <Button type={ buttonType }>
+  <Button type={ buttonType } isBlock={ false }>
     <span style={ { marginRight:10 }}>{children}</span>
     <Icon type={ iconType }/>
   </Button>
