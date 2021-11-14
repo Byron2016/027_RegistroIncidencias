@@ -1,4 +1,6 @@
 .button {
+  display: inline-flex;
+  align-items: center;
   border: 1px solid var(--colors-transparent);;
   padding: 10px 85px;
   border-radius: 30px;
