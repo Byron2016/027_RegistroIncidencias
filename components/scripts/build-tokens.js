@@ -1,5 +1,5 @@
 //import { choices, decisions } from '../util/tokens';
-const { choices, decisions } = require('../util/tokens');
+const { choices, decisions } = require('../tokens');
 const fs = require('fs');
 
 //console.log('>>>scipt')
@@ -87,7 +87,7 @@ function buildTokens(){
   //const data =[":root {",customProperties_Final.trim(),"}"].join('\n')
   const data = [":root {", customProperties_Final.trim()].join("\n\t").concat("\n}");
 
-  fs.writeFile('./util/tokens.css', data, 'utf8', function(error){
+  fs.writeFile('./styles/tokens.css', data, 'utf8', function(error){
     if(error){
       return console.error(error);
     }
