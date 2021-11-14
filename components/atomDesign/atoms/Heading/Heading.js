@@ -1,28 +1,31 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import './Heading.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import classnames from 'classnames'
+import './Heading.css'
 
-export const SIZES = ['xs', 'sm', 'md'];
+export const SIZES = ['xs', 'sm', 'md']
 
-const Heading = ({ children, color, size}) => (
-  <h1 className={classnames(
-    'heading', { 
+const Heading = ({ children, color, size }) => (
+  <h1
+    className={classnames('heading', {
       [`color-${color}`]: color,
-      [`size-${size}`]: size 
-    })}>{children}</h1>
-);
+      [`size-${size}`]: size,
+    })}
+  >
+    {children}
+  </h1>
+)
 
-Heading.prototypes = {
+Heading.propTypes = {
   children: PropTypes.node.isRequired,
-   size: PropTypes.oneOf(['xs', 'sm', 'md']),
-   color: PropTypes.oneOf(['primary','default']),
+  size: PropTypes.oneOf(SIZES), // PropTypes.oneOf(['xs', 'sm', 'md']),
+  color: PropTypes.oneOf(['primary', 'default']),
 }
 
 Heading.defaultProps = {
-  children: "ContenidoDefault",
+  children: 'ContenidoDefault',
   size: SIZES[1],
-  color: "default",
-};
+  color: 'default',
+}
 
-export default Heading;
+export default Heading

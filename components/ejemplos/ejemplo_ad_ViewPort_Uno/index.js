@@ -1,5 +1,6 @@
-import React from "react";
-import "./styles.css";
+import React from 'react'
+import PropTypes from 'prop-types'
+import './styles.css'
 
 const Product = ({ productName, productDescription, imageUrl, imageAlt }) => (
   <article className="product">
@@ -11,6 +12,13 @@ const Product = ({ productName, productDescription, imageUrl, imageAlt }) => (
       <p>{productDescription}</p>
     </div>
   </article>
-);
+)
 
-export default Product;
+Product.propTypes = {
+  productName: PropTypes.node.isRequired,
+  productDescription: PropTypes.string,
+  imageUrl: PropTypes.string,
+  imageAlt: PropTypes.string,
+}
+
+export default Product
