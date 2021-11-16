@@ -1,1 +1,1 @@
-export {default} from './Buttonicon'
+export { default } from './Buttonicon'

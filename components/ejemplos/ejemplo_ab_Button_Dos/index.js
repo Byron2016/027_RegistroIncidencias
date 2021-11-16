@@ -1,1 +1,1 @@
-export { defalut } from "./Button";
+export { defalut } from './Button'
