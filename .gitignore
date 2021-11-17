@@ -616,3 +616,4 @@ FodyWeavers.xsd
 
 ### VisualStudioCode ###
 .vscode
+.eslintcache
