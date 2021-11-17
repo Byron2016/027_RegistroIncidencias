@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon, { TYPES } from './Icon'
+import Icon, { TYPES, SIZE } from './Icon'
 
 export default {
   component: Icon,
@@ -8,13 +8,23 @@ export default {
 
 const Template = (args) => <Icon {...args} />
 
-export const Primary = Template.bind({})
-Primary.args = {
+export const ArrowRight = Template.bind({})
+ArrowRight.args = {
+  size: SIZE[0],
   type: TYPES[0],
+  hasBackground: false,
 }
 
-// export const Secondary = Template.bind({});
-// Secondary.args = {
-//   children: 'Button secondary',
-//   type: TYPES[1],
-// }
+export const AngleDown = Template.bind({})
+AngleDown.args = {
+  size: SIZE[0],
+  type: TYPES[1],
+  hasBackground: false,
+}
+
+export const HasBackground = Template.bind({})
+HasBackground.args = {
+  size: SIZE[0],
+  type: TYPES[1],
+  hasBackground: true,
+}
