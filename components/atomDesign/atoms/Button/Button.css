@@ -30,6 +30,13 @@
   color: var(--colors-white);
 }
 
+/* @media (prefers-color-scheme: dark){
+  :root {
+    --color-primary: white;
+    --colors-white: black;
+  }
+} */
+
 .type-secondary{
   background: var(--colors-transparent);
   color: var(--colors-brand-medium-purple);
