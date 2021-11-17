@@ -13,7 +13,15 @@ function transformTokens(parentKey, object) {
   return objectkeys.reduce((tokensTransformed, objectkey) => {
     const value = object[objectkey]
 
-    if (typeof value === 'object') {
+    if (Array.isArray(value)) {
+      const customProperty = parentKey
+        ? `${parentKey}-${objectkey}`
+        : `${objectkey}`
+
+      return `${tokensTransformed}\n\t--${toKababCase(
+        customProperty
+      )}: ${value.join(', ')};`
+    } else if (typeof value === 'object') {
       const customProperty = parentKey
         ? `${parentKey}-${objectkey}`
         : `${objectkey}`
