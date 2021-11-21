@@ -3,15 +3,15 @@ import PropTypes from 'prop-types'
 import { mapType, mapSize } from './helpers'
 import classNames from 'classnames'
 import Picture from '../Picture'
-import './Icon.css'
+import styles from './Icon.module.css'
 
 export const TYPES = ['arrowRight', 'angleDown']
 export const SIZE = ['sm', 'md', 'lg', 'xl']
 
 const Icon = ({ type, size, hasBackground }) => (
   <div
-    className={classNames('icon', {
-      'has-background': hasBackground,
+    className={classNames(styles.icon, {
+      [styles['has-background']]: hasBackground,
     })}
     style={{ width: mapSize(size), height: mapSize(size) }}
   >
