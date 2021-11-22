@@ -10,16 +10,21 @@ export default {
 //const Template = (args) => <Button {...args}>Primary</Button>;
 const Template = (args) => <Button {...args} />
 
+export const Default = Template.bind({})
+Default.args = {
+  children: 'Default Button',
+}
+
 export const Primary = Template.bind({})
 Primary.args = {
-  children: 'Button primary',
+  children: 'Primary Button',
   type: TYPES[0],
   isBlock: true,
 }
 
 export const Secondary = Template.bind({})
 Secondary.args = {
-  children: 'Button secondary',
+  children: 'Secondary Button',
   type: TYPES[1],
   isBlock: true,
 }
@@ -33,7 +38,7 @@ Secondary.args = {
 
 export const Tertiary = Template.bind({})
 Tertiary.args = {
-  children: 'Button tertiary',
+  children: 'Tertiary Button',
   type: TYPES[2],
   isBlock: true,
 }

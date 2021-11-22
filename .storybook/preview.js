@@ -1,27 +1,28 @@
-import '../styles/main.css'
+import 'minireset.css'
+import '../styles/globals.css'
 import '../styles/tokens.css'
 
-import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
-import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport'
 const customViewports = {
   kindleFire2: {
-    name: "BV Kindle Fire 2",
+    name: 'BV Kindle Fire 2',
     styles: {
-      width: "600px",
-      height: "963px",
+      width: '600px',
+      height: '963px',
     },
   },
   kindleFireHD: {
-    name: "BV Kindle Fire HD",
+    name: 'BV Kindle Fire HD',
     styles: {
-      width: "533px",
-      height: "801px",
+      width: '533px',
+      height: '801px',
     },
   },
-};
+}
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,

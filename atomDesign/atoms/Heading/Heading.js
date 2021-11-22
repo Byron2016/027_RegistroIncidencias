@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import styles from './Heading.module.css'
 
-export const SIZES = ['xs', 'sm', 'md']
+export const SIZES = ['xs', 'sm', 'md', 'lg', 'xl', '2xl']
 
 const Heading = ({ children, color, size }) => (
   <h1

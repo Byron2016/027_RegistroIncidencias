@@ -1,5 +1,5 @@
 # Se debe agregar pluggin Editor config for Visual Studio Code
-# Based on https://github.com/airbnb/javascript/blob/master/.editorconfig
+# https://github.com/airbnb/javascript/blob/master/.editorconfig
 root = true
 
 [*]
