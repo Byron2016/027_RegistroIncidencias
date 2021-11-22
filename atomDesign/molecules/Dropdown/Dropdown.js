@@ -27,7 +27,7 @@ const Dropdown = ({ options, value, onChange }) => (
   <div className={styles.dropdown}>
     <Icon type="angleDown" hasBackground />
     <select
-      className={[styles['dropdown-select']]}
+      className={styles['dropdown-select']}
       onChange={onChange}
       value={value}
     >
